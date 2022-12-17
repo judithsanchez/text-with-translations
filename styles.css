@@ -1,0 +1,64 @@
+:root {
+   --cognates-highlighted: rgba(255, 214, 0, 0.75);
+   ---challenging-text-highlighted: rgba(109, 238, 187, 0.75);
+   --cognates-translated: #FFD600;
+   ---challenging-text-translated: #6DEEBB;
+ }
+ 
+ body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .paragraphs{
+   flex-direction: column;
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 225%;
+   margin: auto;
+   text-align: justify;
+   width: 85%;
+ }
+ 
+ .translation {
+   padding: 5px;
+   text-align: center;
+   display: none;
+   margin-left: 3px;
+ }
+ 
+ .highlighted_cognates {
+   background: linear-gradient(120deg, var(--cognates-highlighted) 0%, var(--cognates-highlighted) 100%);
+   background-repeat: no-repeat;
+   background-size: 100% 50%;
+   background-position: 0 120%;
+   cursor: pointer;
+ }
+ 
+ .cognates_translations {
+   background-color: var(--cognates-translated);
+ }
+ 
+ 
+ .highlighted-challenging_words {
+   background: linear-gradient(120deg, var(---challenging-text-highlighted) 0%, var(---challenging-text-highlighted) 100%);
+   background-repeat: no-repeat;
+   background-size: 100% 50%;
+   background-position: 0 120%;
+   cursor: pointer;
+ }
+ 
+ .challenging_words_translations {
+   background-color: var(---challenging-text-translated);
+ }
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+  
+  
