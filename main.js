@@ -67,7 +67,7 @@ function add_cognates(TextWithTranslations) {
       // If this logic return -1 means that the exact word is not present on the array.
       if (cognate_index !== -1) {
         //The empty span will change with the next function.
-        const cognate_span_container = `<span class='highlighted_cognates' id='cognate${cognate_counter}'  onclick='show_cognate_translation(${cognate_counter})'>${cognate}</span><span class='cognates_translations translation' id='cognate_translation${cognate_counter}'>${TextWithTranslations.cognates[i].in_text_translation}</span>`;
+        const cognate_span_container = `<span class='highlighted_cognates' id='cognate${cognate_counter}'  onclick='toggle_cognate_translation(${cognate_counter})'>${cognate}</span><span class='cognates_translations translation' id='cognate_translation${cognate_counter}'>${TextWithTranslations.cognates[i].in_text_translation}</span>`;
 
         // Replace the cognate with the two span elements created befor.
         split_sentence.splice(cognate_index, 1, cognate_span_container);
@@ -82,16 +82,12 @@ function add_cognates(TextWithTranslations) {
 }
 
 // The span on the code before has this function sp it acts like a "button" and changes the display of one of the span so it shows the translation of the cogante.
-function show_cognate_translation(num) {
+function toggle_cognate_translation(num) {
   const cognate_translation_span = document.getElementById(
     `cognate_translation${num}`
   );
-
-  if (cognate_translation_span.style.display !== "inline") {
-    cognate_translation_span.style.display = "inline";
-  } else {
-    cognate_translation_span.style.display = "none";
-  }
+  cognate_translation_span.style.display =
+    cognate_translation_span.style.display === "inline" ? "none" : "inline";
 }
 
 // Same function as before but it adds challenging_words instead of cognates.
@@ -112,7 +108,7 @@ function add_challenging_words(TextWithTranslations) {
       let challenging_word_index = split_sentence.indexOf(challenging_word);
 
       if (challenging_word_index !== -1) {
-        const challenging_word_span_container = `<span class='highlighted-challenging_words' id='challenging_word${challenging_word_counter}'  onclick='show_challenging_word_translation(${challenging_word_counter})'>${challenging_word}</span><span class='challenging_words_translations translation' id='challenging_word_translation${challenging_word_counter}'>${TextWithTranslations.challenging_words[i].in_text_translation}</span>`;
+        const challenging_word_span_container = `<span class='highlighted-challenging_words' id='challenging_word${challenging_word_counter}'  onclick='toggle_challening_word_translation(${challenging_word_counter})'>${challenging_word}</span><span class='challenging_words_translations translation' id='challenging_word_translation${challenging_word_counter}'>${TextWithTranslations.challenging_words[i].in_text_translation}</span>`;
 
         split_sentence.splice(
           challenging_word_index,
@@ -129,16 +125,14 @@ function add_challenging_words(TextWithTranslations) {
 }
 
 // Same function as before but shows challenging_words instead of cognates.
-function show_challenging_word_translation(num) {
+function toggle_challening_word_translation(num) {
   const challenging_word_translation_span = document.getElementById(
     `challenging_word_translation${num}`
   );
-
-  if (challenging_word_translation_span.style.display !== "inline") {
-    challenging_word_translation_span.style.display = "inline";
-  } else {
-    challenging_word_translation_span.style.display = "none";
-  }
+  challenging_word_translation_span.style.display =
+    challenging_word_translation_span.style.display === "inline"
+      ? "none"
+      : "inline";
 }
 
 // Adds the text of the content to the HTML.
