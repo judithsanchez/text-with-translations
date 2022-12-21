@@ -9,21 +9,6 @@ function add_content_title(containerID, TextWithTranslations) {
   title_element.appendChild(title);
 }
 
-function add_content_thumbnail(containerID, TextWithTranslations) {
-  const container = document.getElementById(containerID);
-
-  const thumbnail = document.createElement("img");
-  thumbnail.setAttribute("alt", "Hen and chick");
-  thumbnail.setAttribute("class", "thumbnail");
-  thumbnail.setAttribute("id", "thumbnail");
-  thumbnail.setAttribute("src", TextWithTranslations.thumbnail);
-  container.appendChild(thumbnail);
-}
-add_content_thumbnail(
-  "container_content_thumbnail",
-  Curiosamente_Video_Huevo_Gallina
-);
-
 function add_activity_instructions(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
 
@@ -62,7 +47,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const instagram_icon = document.createElement("img");
   instagram_icon.setAttribute("alt", "Instagram Icon");
-  instagram_icon.setAttribute("class", "instagram_icon");
+  instagram_icon.setAttribute("class", "creator_social_media");
   instagram_icon.setAttribute("id", "instagram_icon");
   instagram_icon.setAttribute(
     "src",
@@ -79,7 +64,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const facebook_icon = document.createElement("img");
   facebook_icon.setAttribute("alt", "facebook Icon");
-  facebook_icon.setAttribute("class", "facebook_icon");
+  facebook_icon.setAttribute("class", "creator_social_media");
   facebook_icon.setAttribute("id", "facebook_icon");
   facebook_icon.setAttribute(
     "src",
@@ -96,7 +81,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const patreon_icon = document.createElement("img");
   patreon_icon.setAttribute("alt", "patreon Icon");
-  patreon_icon.setAttribute("class", "patreon_icon");
+  patreon_icon.setAttribute("class", "creator_social_media");
   patreon_icon.setAttribute("id", "patreon_icon");
   patreon_icon.setAttribute(
     "src",
@@ -113,7 +98,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const tiktok_icon = document.createElement("img");
   tiktok_icon.setAttribute("alt", "tiktok Icon");
-  tiktok_icon.setAttribute("class", "tiktok_icon");
+  tiktok_icon.setAttribute("class", "creator_social_media");
   tiktok_icon.setAttribute("id", "tiktok_icon");
   tiktok_icon.setAttribute(
     "src",
@@ -130,7 +115,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const twitter_icon = document.createElement("img");
   twitter_icon.setAttribute("alt", "twitter Icon");
-  twitter_icon.setAttribute("class", "twitter_icon");
+  twitter_icon.setAttribute("class", "creator_social_media");
   twitter_icon.setAttribute("id", "twitter_icon");
   twitter_icon.setAttribute(
     "src",
@@ -147,7 +132,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const youtube_icon = document.createElement("img");
   youtube_icon.setAttribute("alt", "youtube Icon");
-  youtube_icon.setAttribute("class", "youtube_icon");
+  youtube_icon.setAttribute("class", "creator_social_media");
   youtube_icon.setAttribute("id", "youtube_icon");
   youtube_icon.setAttribute(
     "src",
@@ -164,7 +149,7 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 
   const website_icon = document.createElement("img");
   website_icon.setAttribute("alt", "website Icon");
-  website_icon.setAttribute("class", "website_icon");
+  website_icon.setAttribute("class", "creator_social_media");
   website_icon.setAttribute("id", "website_icon");
   website_icon.setAttribute(
     "src",
@@ -192,8 +177,6 @@ function add_video_iframe(containerID, TextWithTranslations) {
   video_container.appendChild(video_iframe);
 }
 
-// This function takes a section element from the HMLT and an instance of the class TextWithTranslations that containes the main text and the cogantes and challenging words.
-
 function add_content_text(sectionID, TextWithTranslations) {
   const container_text_translations = document.getElementById(sectionID);
 
@@ -201,13 +184,11 @@ function add_content_text(sectionID, TextWithTranslations) {
   let paragraph_counter = 0;
 
   for (let i = 0; i < TextWithTranslations.number_of_sections; i++) {
-    //Create a div element for each section.
     const container = document.createElement("div");
     container.setAttribute("id", `container${i}`);
     container.setAttribute("class", "content_containers");
     container_text_translations.appendChild(container);
 
-    // Create an h3 element for the title of each section.
     const title = document.createElement("h3");
     title.setAttribute("id", `title${i}`);
     title.setAttribute("class", "titles");
@@ -222,7 +203,6 @@ function add_content_text(sectionID, TextWithTranslations) {
       j < TextWithTranslations.sections[i].paragraphs.length;
       j++
     ) {
-      // Create an h3 element for the title of each section.
       const paragraph = document.createElement("p");
       paragraph.setAttribute("id", `paragraph${paragraph_counter}`);
       paragraph.setAttribute("class", "paragraphs");
@@ -245,17 +225,14 @@ function add_cognates(TextWithTranslations) {
     // Takes the word that will be included on the span.
     const cognate = TextWithTranslations.cognates[i].in_text;
 
-    // Checks every paragraph for an exact match.
     for (let j = 0; j < TextWithTranslations.number_of_paragraphs; j++) {
       const paragraph = document.getElementById(`paragraph${j}`);
       // The sentence is a string.
       const sentence = paragraph.innerHTML;
 
-      // Separates the sentence into an array of words and, because of the RegEx it add a bunch of extra spaces. It is unavoidable and will be fix using .join("").
       const split_sentence =
         TextWithTranslations.separate_sentence_into_words(sentence);
 
-      // Gets the index of the word within the separated senten.
       let cognate_index = split_sentence.indexOf(cognate);
 
       // If this logic return -1 means that the exact word is not present on the array.
@@ -263,7 +240,6 @@ function add_cognates(TextWithTranslations) {
         //The empty span will change with the next function.
         const cognate_span_container = `<span class='highlighted_cognates' id='cognate${cognate_counter}'  onclick='toggle_cognate_translation(${cognate_counter})'>${cognate}</span><span class='cognates_translations translation' id='cognate_translation${cognate_counter}'>${TextWithTranslations.cognates[i].in_text_translation}</span>`;
 
-        // Replace the cognate with the two span elements created befor.
         split_sentence.splice(cognate_index, 1, cognate_span_container);
         const joined_sentence = split_sentence.join("");
 
@@ -275,7 +251,6 @@ function add_cognates(TextWithTranslations) {
   }
 }
 
-// The span on the code before has this function sp it acts like a "button" and changes the display of one of the span so it shows the translation of the cogante.
 function toggle_cognate_translation(num) {
   const cognate_translation_span = document.getElementById(
     `cognate_translation${num}`
@@ -284,7 +259,6 @@ function toggle_cognate_translation(num) {
     cognate_translation_span.style.display === "inline" ? "none" : "inline";
 }
 
-// Same function as before but it adds challenging_words instead of cognates.
 function add_challenging_words(TextWithTranslations) {
   // This counter avoids repetition of numbers in the span ids.
   let challenging_word_counter = 0;
@@ -318,7 +292,6 @@ function add_challenging_words(TextWithTranslations) {
   }
 }
 
-// Same function as before but shows challenging_words instead of cognates.
 function toggle_challening_word_translation(num) {
   const challenging_word_translation_span = document.getElementById(
     `challenging_word_translation${num}`
@@ -329,36 +302,27 @@ function toggle_challening_word_translation(num) {
       : "inline";
 }
 
-// Adds the title to the activity
 add_content_title("container_content_title", Curiosamente_Video_Huevo_Gallina);
-
-// Adds the activity instructions.
 
 add_activity_instructions(
   "container_activity_instructions",
   Curiosamente_Video_Huevo_Gallina
 );
 
-// Adds creator disclaimer
 add_creator_disclaimer(
   "container_creator_disclaimer",
   Curiosamente_Video_Huevo_Gallina
 );
 
-// Adds creator's social media info
 add_creator_social_media(
   "container_creator_social_media",
   Curiosamente_Video_Huevo_Gallina
 );
 
-// Adds the attributes to create an iframe for the video player.
 add_video_iframe("video_container", Curiosamente_Video_Huevo_Gallina);
 
-// Adds the text of the content to the HTML.
 add_content_text("text_with_translations", Curiosamente_Video_Huevo_Gallina);
 
-// Adds the cognates to the text.
 add_cognates(Curiosamente_Video_Huevo_Gallina);
 
-// Adds challenging words to the text.
 add_challenging_words(Curiosamente_Video_Huevo_Gallina);

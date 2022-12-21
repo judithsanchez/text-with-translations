@@ -1,12 +1,14 @@
 .container_activity_info {
   display: grid;
+  font-family: Arial, Helvetica, sans-serif;
   grid-template-areas: 
-    "title title"
-    "thumbnail instructions"
-    "thumbnail socialmedia"
-    "thumbnail disclaimer"
+    "video video title"
+    "video video instructions"
+    "disclaimer disclaimer disclaimer"
+    "socialmedia socialmedia socialmedia"
   ;
   margin: auto;
+  margin-top: 5%;
   text-align: center;
   width: 75vw;
 }
@@ -15,26 +17,43 @@
   grid-area: title;
 }
 
-/* .content_title {
-  text-align: center;
-} */
-
-.container_content_thumbnail {
-  grid-area: thumbnail;
-  width: 100%;
+.content_title {
+  color: #7F7DCF;
+  font-size: 32px;
 }
 
-.thumbnail {
+.video_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: video;
+  height: calc(40vw * (2.5 / 4));
+  width: 40vw;
+}
+
+.video_container iframe {
   width: 100%;
+  height: 100%;
 }
 
 .container_activity_instructions {
   grid-area: instructions;
 }
 
-/* .activity_instructions {
-  text-align: center;
-} */
+.activity_instructions {
+  font-size: 20px;
+}
+
+.container_creator_disclaimer {
+  grid-area: disclaimer;
+}
+
+.creator_disclaimer {
+  background-color: #47D8E0;
+  color: white;
+  font-size: 16px;
+  padding: 30px;
+}
 
 .container_creator_social_media {
   display: flex;
@@ -43,25 +62,11 @@
   grid-area: socialmedia;
 }
 
-.container_creator_disclaimer {
-  grid-area: disclaimer;
+.creator_social_media {
+  width: 40px;
+  height: 40px;
 }
 
-/* .creator_disclaimer {
-  text-align: center;
-} */
-
-
-.video_container {
-  height: calc(75vw * (2 / 4));
-  margin: auto;
-  width: 75vw;
-}
-
-.video_container iframe {
-  width: 100%;
-  height: 100%;
-}
 
 .content_containers {
   display: flex;
@@ -121,4 +126,52 @@
 
 .challenging_words_translations {
   background-color: #6deebb;
+}
+
+@media (orientation: portrait) and (max-width: 750px) {
+  .container_activity_info {
+    grid-template-areas: 
+      "title"
+      "instructions"
+      "video"
+      "disclaimer"
+      "socialmedia"
+    ;
+  }
+
+  .content_title {
+    color: #7F7DCF;
+    font-size: 24px;
+  }
+
+  .container_activity_instructions {
+    grid-area: instructions;
+  }
+
+  .activity_instructions {
+    font-size: 14px;
+    margin-bottom: 5%;
+  }
+
+  .video_container {
+    margin: auto;
+    grid-area: video;
+    height: calc(75vw * (2.5 / 4));
+    width: 75vw;
+  }
+
+  .creator_disclaimer {
+    font-size: 12px;
+    padding-bottom: 10%;
+  }
+
+  .container_creator_social_media {
+    margin-top: -10%;
+    margin-bottom: 5%;
+  }
+  
+  .creator_social_media {
+    width: 25px;
+    height: 25px;
+  }
 }
