@@ -1,3 +1,197 @@
+function add_content_title(containerID, TextWithTranslations) {
+  const container = document.getElementById(containerID);
+  const title_element = document.createElement("h1");
+  title_element.setAttribute("id", "content_title");
+  title_element.setAttribute("class", "content_title");
+  container.appendChild(title_element);
+
+  const title = document.createTextNode(TextWithTranslations.title);
+  title_element.appendChild(title);
+}
+
+function add_content_thumbnail(containerID, TextWithTranslations) {
+  const container = document.getElementById(containerID);
+
+  const thumbnail = document.createElement("img");
+  thumbnail.setAttribute("alt", "Hen and chick");
+  thumbnail.setAttribute("class", "thumbnail");
+  thumbnail.setAttribute("id", "thumbnail");
+  thumbnail.setAttribute("src", TextWithTranslations.thumbnail);
+  container.appendChild(thumbnail);
+}
+add_content_thumbnail(
+  "container_content_thumbnail",
+  Curiosamente_Video_Huevo_Gallina
+);
+
+function add_activity_instructions(containerID, TextWithTranslations) {
+  const container = document.getElementById(containerID);
+
+  const text_element = document.createElement("p");
+  text_element.setAttribute("id", "activity_instructions");
+  text_element.setAttribute("class", "activity_instructions");
+  container.appendChild(text_element);
+
+  const disclaimer = document.createTextNode(TextWithTranslations.instructions);
+  text_element.appendChild(disclaimer);
+}
+
+function add_creator_disclaimer(containerID, TextWithTranslations) {
+  const container = document.getElementById(containerID);
+
+  const text_element = document.createElement("p");
+  text_element.setAttribute("id", "creator_disclaimer");
+  text_element.setAttribute("class", "creator_disclaimer");
+  container.appendChild(text_element);
+
+  const disclaimer = document.createTextNode(
+    TextWithTranslations.content.creator.disclaimer
+  );
+  text_element.appendChild(disclaimer);
+}
+
+function add_creator_social_media(containerID, TextWithTranslations) {
+  const container = document.getElementById(containerID);
+
+  const instagram_link = document.createElement("a");
+  instagram_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.instagram
+  );
+  container.appendChild(instagram_link);
+
+  const instagram_icon = document.createElement("img");
+  instagram_icon.setAttribute("alt", "Instagram Icon");
+  instagram_icon.setAttribute("class", "instagram_icon");
+  instagram_icon.setAttribute("id", "instagram_icon");
+  instagram_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_instagram.svg"
+  );
+  instagram_link.appendChild(instagram_icon);
+
+  const facebook_link = document.createElement("a");
+  facebook_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.facebook
+  );
+  container.appendChild(facebook_link);
+
+  const facebook_icon = document.createElement("img");
+  facebook_icon.setAttribute("alt", "facebook Icon");
+  facebook_icon.setAttribute("class", "facebook_icon");
+  facebook_icon.setAttribute("id", "facebook_icon");
+  facebook_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_facebook.svg"
+  );
+  facebook_link.appendChild(facebook_icon);
+
+  const patreon_link = document.createElement("a");
+  patreon_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.patreon
+  );
+  container.appendChild(patreon_link);
+
+  const patreon_icon = document.createElement("img");
+  patreon_icon.setAttribute("alt", "patreon Icon");
+  patreon_icon.setAttribute("class", "patreon_icon");
+  patreon_icon.setAttribute("id", "patreon_icon");
+  patreon_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_patreon.svg"
+  );
+  patreon_link.appendChild(patreon_icon);
+
+  const tiktok_link = document.createElement("a");
+  tiktok_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.tiktok
+  );
+  container.appendChild(tiktok_link);
+
+  const tiktok_icon = document.createElement("img");
+  tiktok_icon.setAttribute("alt", "tiktok Icon");
+  tiktok_icon.setAttribute("class", "tiktok_icon");
+  tiktok_icon.setAttribute("id", "tiktok_icon");
+  tiktok_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_tiktok.svg"
+  );
+  tiktok_link.appendChild(tiktok_icon);
+
+  const twitter_link = document.createElement("a");
+  twitter_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.twitter
+  );
+  container.appendChild(twitter_link);
+
+  const twitter_icon = document.createElement("img");
+  twitter_icon.setAttribute("alt", "twitter Icon");
+  twitter_icon.setAttribute("class", "twitter_icon");
+  twitter_icon.setAttribute("id", "twitter_icon");
+  twitter_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_twitter.svg"
+  );
+  twitter_link.appendChild(twitter_icon);
+
+  const youtube_link = document.createElement("a");
+  youtube_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.youtube
+  );
+  container.appendChild(youtube_link);
+
+  const youtube_icon = document.createElement("img");
+  youtube_icon.setAttribute("alt", "youtube Icon");
+  youtube_icon.setAttribute("class", "youtube_icon");
+  youtube_icon.setAttribute("id", "youtube_icon");
+  youtube_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_youtube.svg"
+  );
+  youtube_link.appendChild(youtube_icon);
+
+  const website_link = document.createElement("a");
+  website_link.setAttribute(
+    "href",
+    TextWithTranslations.content.creator.socialmedia.website
+  );
+  container.appendChild(website_link);
+
+  const website_icon = document.createElement("img");
+  website_icon.setAttribute("alt", "website Icon");
+  website_icon.setAttribute("class", "website_icon");
+  website_icon.setAttribute("id", "website_icon");
+  website_icon.setAttribute(
+    "src",
+    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_curiosamente.svg"
+  );
+  website_link.appendChild(website_icon);
+}
+
+function add_video_iframe(containerID, TextWithTranslations) {
+  const video_container = document.getElementById(containerID);
+
+  const video_iframe = document.createElement("iframe");
+  video_iframe.setAttribute(
+    "src",
+    TextWithTranslations.content.youtube_embed_url
+  );
+  video_iframe.setAttribute("title", "YouTube video player");
+  video_iframe.setAttribute("frameborder", "0");
+  video_iframe.setAttribute(
+    "allow",
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  );
+  video_iframe.setAttribute("allowfullscreen", "");
+
+  video_container.appendChild(video_iframe);
+}
+
 // This function takes a section element from the HMLT and an instance of the class TextWithTranslations that containes the main text and the cogantes and challenging words.
 
 function add_content_text(sectionID, TextWithTranslations) {
@@ -10,7 +204,7 @@ function add_content_text(sectionID, TextWithTranslations) {
     //Create a div element for each section.
     const container = document.createElement("div");
     container.setAttribute("id", `container${i}`);
-    container.setAttribute("class", "content-containers");
+    container.setAttribute("class", "content_containers");
     container_text_translations.appendChild(container);
 
     // Create an h3 element for the title of each section.
@@ -135,11 +329,36 @@ function toggle_challening_word_translation(num) {
       : "inline";
 }
 
+// Adds the title to the activity
+add_content_title("container_content_title", Curiosamente_Video_Huevo_Gallina);
+
+// Adds the activity instructions.
+
+add_activity_instructions(
+  "container_activity_instructions",
+  Curiosamente_Video_Huevo_Gallina
+);
+
+// Adds creator disclaimer
+add_creator_disclaimer(
+  "container_creator_disclaimer",
+  Curiosamente_Video_Huevo_Gallina
+);
+
+// Adds creator's social media info
+add_creator_social_media(
+  "container_creator_social_media",
+  Curiosamente_Video_Huevo_Gallina
+);
+
+// Adds the attributes to create an iframe for the video player.
+add_video_iframe("video_container", Curiosamente_Video_Huevo_Gallina);
+
 // Adds the text of the content to the HTML.
 add_content_text("text_with_translations", Curiosamente_Video_Huevo_Gallina);
 
-//Adds the cognates to the text.
+// Adds the cognates to the text.
 add_cognates(Curiosamente_Video_Huevo_Gallina);
 
-//Adds challenging words to the text.
+// Adds challenging words to the text.
 add_challenging_words(Curiosamente_Video_Huevo_Gallina);

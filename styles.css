@@ -1,29 +1,75 @@
-/* :root {
-  --cognates-highlighted: rgba(255, 214, 0, 0.75);
-  --challenging-text-highlighted: rgba(109, 238, 187, 0.75);
-  --cognates-translated: #FFD600;
-  --challenging-text-translated: #6DEEBB;
-  --sections-titles:#464646;
+.container_activity_info {
+  display: grid;
+  grid-template-areas: 
+    "title title"
+    "thumbnail instructions"
+    "thumbnail socialmedia"
+    "thumbnail disclaimer"
+  ;
+  margin: auto;
+  text-align: center;
+  width: 75vw;
+}
+
+.container_content_title {
+  grid-area: title;
+}
+
+/* .content_title {
+  text-align: center;
 } */
 
-.video-iframe {
-  height: calc(75vw * (2/4));
+.container_content_thumbnail {
+  grid-area: thumbnail;
+  width: 100%;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.container_activity_instructions {
+  grid-area: instructions;
+}
+
+/* .activity_instructions {
+  text-align: center;
+} */
+
+.container_creator_social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: socialmedia;
+}
+
+.container_creator_disclaimer {
+  grid-area: disclaimer;
+}
+
+/* .creator_disclaimer {
+  text-align: center;
+} */
+
+
+.video_container {
+  height: calc(75vw * (2 / 4));
   margin: auto;
   width: 75vw;
 }
 
-.video-iframe iframe {
+.video_container iframe {
   width: 100%;
   height: 100%;
 }
 
-.content-containers {
+.content_containers {
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   margin-bottom: 50px;
-  width: 75%;
+  width: 75vw;
 }
 
 .titles {
@@ -31,50 +77,48 @@
   padding: 0%;
   text-align: left;
 }
- 
-.paragraphs{
+
+.paragraphs {
   font-size: 18px;
   line-height: 225%;
   margin: 0 0 5px 0;
   padding: 0%;
 }
- 
+
 .translation {
   padding: 5px;
   display: none;
   margin-left: 3px;
 }
- 
+
 .highlighted_cognates {
-  background: linear-gradient(120deg, rgba(255, 214, 0, 0.75) 0%, rgba(255, 214, 0, 0.75) 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 214, 0, 0.75) 0%,
+    rgba(255, 214, 0, 0.75) 100%
+  );
   background-repeat: no-repeat;
   background-size: 100% 50%;
   background-position: 0 120%;
   cursor: pointer;
 }
- 
+
 .cognates_translations {
-  background-color: #FFD600;
+  background-color: #ffd600;
 }
- 
+
 .highlighted-challenging_words {
-  background: linear-gradient(120deg, rgba(109, 238, 187, 0.75) 0%, rgba(109, 238, 187, 0.75) 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(109, 238, 187, 0.75) 0%,
+    rgba(109, 238, 187, 0.75) 100%
+  );
   background-repeat: no-repeat;
   background-size: 100% 50%;
   background-position: 0 120%;
   cursor: pointer;
 }
- 
+
 .challenging_words_translations {
-  background-color: #6DEEBB;
+  background-color: #6deebb;
 }
- 
- 
- 
-  
- 
-  
- 
- 
-  
-  

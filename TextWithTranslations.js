@@ -1,6 +1,11 @@
 class TextWithTranslations {
-  constructor(content) {
+  constructor(title, content, instructions, thumbnail) {
+    this.title = title;
     this.content = content;
+
+    this.instructions = instructions;
+
+    this.thumbnail = thumbnail;
 
     this.sections = content.text.sections;
     this.number_of_sections = content.number_of_sections;
@@ -18,5 +23,8 @@ class TextWithTranslations {
 }
 
 const Curiosamente_Video_Huevo_Gallina = new TextWithTranslations(
-  Video_Huevo_Gallina
+  "Practice Spanish with Youtube #01",
+  Video_Huevo_Gallina,
+  "Once you finish watching the video, scroll down to find the transcript. If you click on the highlighted words, you can view their translations. Don't forget to take the quiz after reading the transcript.",
+  "https://bocaditosespanol.com/wp-content/uploads/2022/12/DALL·E-2022-12-19-11.19.35.png"
 );

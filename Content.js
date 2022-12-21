@@ -1,8 +1,19 @@
 class Content {
-  constructor(creator, type, url, text, cognates, challenging_words) {
+  constructor(
+    creator,
+    title,
+    type,
+    url,
+    youtube_embed_url,
+    text,
+    cognates,
+    challenging_words
+  ) {
     this.creator = creator;
+    this.title = title;
     this.type = type;
     this.url = url;
+    this.youtube_embed_url = youtube_embed_url;
 
     this.text = {
       sections: text,
@@ -30,8 +41,10 @@ class Content {
 
 const Video_Huevo_Gallina = new Content(
   Creator_Curiosamente,
+  "¿Qué fue primero, el huevo o la gallina?",
   "video",
   "https://www.youtube.com/watch?v=r7Na9cbquHg&ab_channel=CuriosaMente",
+  "https://www.youtube.com/embed/r7Na9cbquHg",
   [
     {
       title: "Introducción",
@@ -307,7 +320,7 @@ const Video_Huevo_Gallina = new Content(
     },
     {
       in_text: "pregunta",
-      in_text_translation: "ask",
+      in_text_translation: "question",
       english: "question",
       spanish: "la pregunta",
     },
