@@ -4,6 +4,8 @@
   background-position: center;
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
   grid-template-areas: 
     "video title"
     "video instructions"
@@ -11,12 +13,15 @@
     "socialmedia socialmedia"
   ;
   margin: auto;
-  padding: 2% 5% 2% 5%;
   text-align: center;
 }
 
 .container_content_title {
+  align-self: center;
+  display: flex;
   grid-area: title;
+  justify-self: center;
+  
 }
 
 .content_title {
@@ -25,11 +30,9 @@
 
 .video_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   grid-area: video;
-  height: calc(40vw * (2.5 / 4));
-  width: 40vw;
+  height: calc(60vw * (2.5 / 4));
+  width: 100%;
 }
 
 .video_container iframe {
@@ -49,14 +52,13 @@
 .container_creator_disclaimer {
   background-color: #DB4D89;
   grid-area: disclaimer;
-  margin-top: 3%;
   width: 100%;
 }
 
 .creator_disclaimer {
   color: white;
   font-size: 16px;
-  padding: 30px;
+  padding: 2%;
 }
 
 .container_creator_social_media {
@@ -64,35 +66,33 @@
   flex-direction: row;
   justify-content: space-around;
   grid-area: socialmedia;
+  margin-bottom: -50px;
 }
 
 .creator_social_media {
-  margin-top: -30px;
+  margin-top: -50%;
   width: 40px;
   height: 40px;
 }
 
+.text_with_translations {
+  margin: auto;
+  width: 90%;
+}
 
 .content_containers {
-  display: flex;
-  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 75vw;
+  margin-top: 75px;
 }
 
 .titles {
   margin: 0 0 10px 0;
-  padding: 0%;
   text-align: left;
 }
 
 .paragraphs {
   font-size: 18px;
-  line-height: 225%;
-  padding: 0%;
+  line-height: 200%;
 }
 
 .translation {
@@ -133,6 +133,103 @@
   background-color: #6deebb;
 }
 
-/* @media (orientation: portrait) and (max-width: 750px) {
+@media (orientation: portrait) and (max-width: 800px) {
+  .container_activity_info {
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "title"
+      "instructions"
+      "video" 
+      "disclaimer"
+      "socialmedia"
+    ;
+    margin: auto;
+    text-align: justify;
+  }
+  
+  .content_title {
+    font-size: 24px;
+  }
 
-} */
+  .video_container {
+    height: calc(90vw * (2.5 / 4));
+    width: 100%;
+  }
+  
+  .video_container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container_activity_instructions {
+    grid-area: instructions;
+    margin: 0 2%;
+  }
+  
+  .activity_instructions {
+    font-size: 12px;
+  }
+  
+  .creator_disclaimer {
+    color: white;
+    font-size: 12px;
+    padding: 2%;
+  }
+  
+  .container_creator_social_media {
+    margin-bottom: -50px;
+  }
+  
+  .creator_social_media {
+    margin-top: -50%;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .container_activity_info {
+    grid-template-columns: 60% 40%;
+  }
+
+  .content_title {
+    font-size: 24px;
+  }
+
+  .video_container {
+    height: calc(60vw * (2.5 / 4));
+    width: 100%;
+  }
+  
+  .video_container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container_activity_instructions {
+    margin: 0 1%;
+  }
+  
+  .activity_instructions {
+    font-size: 12px;
+  }
+  
+  .creator_disclaimer {
+    color: white;
+    font-size: 12px;
+    padding: 1%;
+  }
+  
+  .container_creator_social_media {
+    margin-bottom: -50px;
+  }
+  
+  .creator_social_media {
+    margin-top: -50%;
+    width: 25px;
+    height: 25px;
+  }
+}

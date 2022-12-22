@@ -198,7 +198,7 @@ const Video_Huevo_Gallina = new Content(
     },
     {
       in_text: "probable",
-      in_text_translation: "probaly",
+      in_text_translation: "probably",
       english: "probably",
       spanish: "probable",
     },
