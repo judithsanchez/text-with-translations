@@ -117,7 +117,7 @@
   background-color: #ffd600;
 }
 
-.highlighted-challenging_words {
+.highlighted_challenging_words {
   background: linear-gradient(
     120deg,
     rgba(109, 238, 187, 0.75) 0%,
@@ -131,6 +131,38 @@
 
 .challenging_words_translations {
   background-color: #6deebb;
+}
+
+.highlighted_false_cognates {
+  background: linear-gradient(
+    120deg,
+    rgba(219, 77, 137, 0.5) 0%,
+    rgba(219, 77, 137, 0.5) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 120%;
+  cursor: pointer;
+}
+
+.false_cognates_translations {
+  background-color: rgba(219, 77, 137, 0.75) ;
+}
+
+.highlighted_subjunctives {
+  background: linear-gradient(
+    120deg,
+    rgba(127, 125, 207, 0.5) 0%,
+    rgba(127, 125, 207, 0.5) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 120%;
+  cursor: pointer;
+}
+
+.subjunctives_translations {
+  background-color: rgba(127, 125, 207, 0.75) ;
 }
 
 @media (orientation: portrait) and (max-width: 800px) {

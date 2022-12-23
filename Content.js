@@ -7,7 +7,9 @@ class Content {
     youtube_embed_url,
     text,
     cognates,
-    challenging_words
+    challenging_words,
+    false_cognates,
+    subjunctives
   ) {
     this.creator = creator;
     this.title = title;
@@ -27,6 +29,12 @@ class Content {
 
     this.challenging_words = challenging_words;
     this.number_of_challenging_words = challenging_words.length;
+
+    this.false_cognates = false_cognates;
+    this.number_of_false_cognates = false_cognates.length;
+
+    this.subjunctives = subjunctives;
+    this.number_of_subjunctives = subjunctives.length;
   }
 
   get_number_of_paragraphs(objects_array) {
@@ -93,6 +101,8 @@ const Video_Huevo_Gallina = new Content(
       ],
     },
   ],
+
+  // Cognates
   [
     {
       in_text: "contento",
@@ -114,7 +124,7 @@ const Video_Huevo_Gallina = new Content(
     },
     {
       in_text: "factores",
-      in_text_translation: "factores",
+      in_text_translation: "factors",
       english: "factores",
       spanish: "el factor",
     },
@@ -286,7 +296,33 @@ const Video_Huevo_Gallina = new Content(
       english: "channel",
       spanish: "el canal",
     },
+    {
+      in_text: "difícil",
+      in_text_translation: "difficult",
+      english: "difficult",
+      spanish: "difícil",
+    },
+    {
+      in_text: "ejemplo",
+      in_text_translation: "example",
+      english: "example",
+      spanish: "ejemplo",
+    },
+    {
+      in_text: "reptiles",
+      in_text_translation: "reptiles",
+      english: "reptile",
+      spanish: "el reptil",
+    },
+    {
+      in_text: "domesticar",
+      in_text_translation: "domesticate",
+      english: "domesticate",
+      spanish: "domesticar",
+    },
   ],
+
+  // Challenging words
   [
     {
       in_text: "primero",
@@ -368,8 +404,8 @@ const Video_Huevo_Gallina = new Content(
     },
     {
       in_text: "mismo",
-      in_text_translation: "itself",
-      english: "itself",
+      in_text_translation: "same",
+      english: "same",
       spanish: "mismo",
     },
     {
@@ -469,12 +505,6 @@ const Video_Huevo_Gallina = new Content(
       spanish: "el gallo",
     },
     {
-      in_text: "actuales",
-      in_text_translation: "current",
-      english: "current",
-      spanish: "actual",
-    },
-    {
       in_text: "pertenecían",
       in_text_translation: "belonged",
       english: "belong",
@@ -569,6 +599,92 @@ const Video_Huevo_Gallina = new Content(
       in_text_translation: "new",
       english: "new",
       spanish: "nuevo",
+    },
+    {
+      in_text: "debido",
+      in_text_translation: "because",
+      english: "debido a",
+      spanish: "because",
+    },
+    {
+      in_text: "siempre",
+      in_text_translation: "always",
+      english: "siempre",
+      spanish: "always",
+    },
+    {
+      in_text: "algo",
+      in_text_translation: "something",
+      english: "algo",
+      spanish: "something",
+    },
+    {
+      in_text: "cosas",
+      in_text_translation: "things",
+      english: "things",
+      spanish: "cosas",
+    },
+    {
+      in_text: "tanto",
+      in_text_translation: "as much as",
+      english: "as much as",
+      spanish: "tanto como",
+    },
+    {
+      in_text: "lleva",
+      in_text_translation: "takes us",
+      english: "takes us",
+      spanish: "nos lleva",
+    },
+    {
+      in_text: "antes que",
+      in_text_translation: "before",
+      english: "before",
+      spanish: "antes que",
+    },
+    {
+      in_text: "después",
+      in_text_translation: "after",
+      english: "after",
+      spanish: "después de",
+    },
+    {
+      in_text: "cruzados",
+      in_text_translation: "crossed",
+      english: "cross",
+      spanish: "cruzar",
+    },
+    {
+      in_text: "trabajo",
+      in_text_translation: "work",
+      english: "work",
+      spanish: "el trabajo",
+    },
+  ],
+
+  // False Cognates
+  [
+    {
+      in_text: "actuales",
+      in_text_translation: "current",
+      english: "current",
+      spanish: "actual",
+    },
+  ],
+
+  // Subjunctives
+  [
+    {
+      in_text: "fueran",
+      in_text_translation: "were",
+      english: "they were",
+      spanish: "ellos fueran",
+    },
+    {
+      in_text: "hubiera",
+      in_text_translation: "there were",
+      english: "there were",
+      spanish: "hubiera",
     },
   ]
 );

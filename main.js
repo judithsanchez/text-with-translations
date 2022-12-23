@@ -276,7 +276,7 @@ function add_challenging_words(TextWithTranslations) {
       let challenging_word_index = split_sentence.indexOf(challenging_word);
 
       if (challenging_word_index !== -1) {
-        const challenging_word_span_container = `<span class='highlighted-challenging_words' id='challenging_word${challenging_word_counter}'  onclick='toggle_challening_word_translation(${challenging_word_counter})'>${challenging_word}</span><span class='challenging_words_translations translation' id='challenging_word_translation${challenging_word_counter}'>${TextWithTranslations.challenging_words[i].in_text_translation}</span>`;
+        const challenging_word_span_container = `<span class='highlighted_challenging_words' id='challenging_word${challenging_word_counter}'  onclick='toggle_challening_word_translation(${challenging_word_counter})'>${challenging_word}</span><span class='challenging_words_translations translation' id='challenging_word_translation${challenging_word_counter}'>${TextWithTranslations.challenging_words[i].in_text_translation}</span>`;
 
         split_sentence.splice(
           challenging_word_index,
@@ -300,6 +300,87 @@ function toggle_challening_word_translation(num) {
     challenging_word_translation_span.style.display === "inline"
       ? "none"
       : "inline";
+}
+
+function add_false_cognates(TextWithTranslations) {
+  // This counter avoids repetition of numbers in the span ids.
+  let false_cognate_counter = 0;
+
+  for (let i = 0; i < TextWithTranslations.false_cognates.length; i++) {
+    const false_cognate = TextWithTranslations.false_cognates[i].in_text;
+
+    for (let j = 0; j < TextWithTranslations.number_of_paragraphs; j++) {
+      const paragraph = document.getElementById(`paragraph${j}`);
+      const sentence = paragraph.innerHTML;
+
+      const split_sentence =
+        TextWithTranslations.separate_sentence_into_words(sentence);
+
+      let false_cognate_index = split_sentence.indexOf(false_cognate);
+
+      if (false_cognate_index !== -1) {
+        const false_cognate_span_container = `<span class='highlighted_false_cognates' id='false_cognate${false_cognate_counter}'  onclick='toggle_false_cognate_translation(${false_cognate_counter})'>${false_cognate}</span><span class='false_cognates_translations translation' id='false_cognate_translation${false_cognate_counter}'>${TextWithTranslations.false_cognates[i].in_text_translation}</span>`;
+
+        split_sentence.splice(
+          false_cognate_index,
+          1,
+          false_cognate_span_container
+        );
+        const joined_sentence = split_sentence.join("");
+
+        paragraph.innerHTML = joined_sentence;
+        false_cognate_counter++;
+      }
+    }
+  }
+}
+
+function toggle_false_cognate_translation(num) {
+  const false_cognate_translation_span = document.getElementById(
+    `false_cognate_translation${num}`
+  );
+  false_cognate_translation_span.style.display =
+    false_cognate_translation_span.style.display === "inline"
+      ? "none"
+      : "inline";
+}
+
+function add_subjunctives(TextWithTranslations) {
+  console.log("entra");
+  // This counter avoids repetition of numbers in the span ids.
+  let subjunctive_counter = 0;
+
+  for (let i = 0; i < TextWithTranslations.subjunctives.length; i++) {
+    const subjunctive = TextWithTranslations.subjunctives[i].in_text;
+
+    for (let j = 0; j < TextWithTranslations.number_of_paragraphs; j++) {
+      const paragraph = document.getElementById(`paragraph${j}`);
+      const sentence = paragraph.innerHTML;
+
+      const split_sentence =
+        TextWithTranslations.separate_sentence_into_words(sentence);
+
+      let subjunctive_index = split_sentence.indexOf(subjunctive);
+
+      if (subjunctive_index !== -1) {
+        const subjunctive_span_container = `<span class='highlighted_subjunctives' id='subjunctive${subjunctive_counter}'  onclick='toggle_subjunctive_translation(${subjunctive_counter})'>${subjunctive}</span><span class='subjunctives_translations translation' id='subjunctive_translation${subjunctive_counter}'>${TextWithTranslations.subjunctives[i].in_text_translation}</span>`;
+
+        split_sentence.splice(subjunctive_index, 1, subjunctive_span_container);
+        const joined_sentence = split_sentence.join("");
+
+        paragraph.innerHTML = joined_sentence;
+        subjunctive_counter++;
+      }
+    }
+  }
+}
+
+function toggle_subjunctive_translation(num) {
+  const subjunctive_translation_span = document.getElementById(
+    `subjunctive_translation${num}`
+  );
+  subjunctive_translation_span.style.display =
+    subjunctive_translation_span.style.display === "inline" ? "none" : "inline";
 }
 
 add_content_title("container_content_title", Curiosamente_Video_Huevo_Gallina);
@@ -326,3 +407,7 @@ add_content_text("text_with_translations", Curiosamente_Video_Huevo_Gallina);
 add_cognates(Curiosamente_Video_Huevo_Gallina);
 
 add_challenging_words(Curiosamente_Video_Huevo_Gallina);
+
+add_false_cognates(Curiosamente_Video_Huevo_Gallina);
+
+add_subjunctives(Curiosamente_Video_Huevo_Gallina);

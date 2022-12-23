@@ -15,6 +15,10 @@ class TextWithTranslations {
     this.cognates = content.cognates;
 
     this.challenging_words = content.challenging_words;
+
+    this.false_cognates = content.false_cognates;
+
+    this.subjunctives = content.subjunctives;
   }
 
   separate_sentence_into_words(sentence) {
