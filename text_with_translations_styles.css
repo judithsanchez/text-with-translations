@@ -1,5 +1,5 @@
 .container_activity_info {
-  background-image: url("./practice_background.svg");
+  background-image: url("https://bocaditosespanol.com/wp-content/uploads/2022/12/practice_background.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: grid;
@@ -165,6 +165,7 @@
   background-color: rgba(127, 125, 207, 0.75) ;
 }
 
+
 @media (orientation: portrait) and (max-width: 800px) {
   .container_activity_info {
     display: grid;
@@ -265,3 +266,6 @@
     height: 25px;
   }
 }
+
+
+/* QUIZZ */

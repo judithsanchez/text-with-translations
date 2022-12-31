@@ -346,7 +346,6 @@ function toggle_false_cognate_translation(num) {
 }
 
 function add_subjunctives(TextWithTranslations) {
-  console.log("entra");
   // This counter avoids repetition of numbers in the span ids.
   let subjunctive_counter = 0;
 
@@ -383,31 +382,3 @@ function toggle_subjunctive_translation(num) {
     subjunctive_translation_span.style.display === "inline" ? "none" : "inline";
 }
 
-add_content_title("container_content_title", Curiosamente_Video_Huevo_Gallina);
-
-add_activity_instructions(
-  "container_activity_instructions",
-  Curiosamente_Video_Huevo_Gallina
-);
-
-add_creator_disclaimer(
-  "container_creator_disclaimer",
-  Curiosamente_Video_Huevo_Gallina
-);
-
-add_creator_social_media(
-  "container_creator_social_media",
-  Curiosamente_Video_Huevo_Gallina
-);
-
-add_video_iframe("video_container", Curiosamente_Video_Huevo_Gallina);
-
-add_content_text("text_with_translations", Curiosamente_Video_Huevo_Gallina);
-
-add_cognates(Curiosamente_Video_Huevo_Gallina);
-
-add_challenging_words(Curiosamente_Video_Huevo_Gallina);
-
-add_false_cognates(Curiosamente_Video_Huevo_Gallina);
-
-add_subjunctives(Curiosamente_Video_Huevo_Gallina);
