@@ -1,4 +1,4 @@
-class Content {
+class ActivityContent {
   constructor(
     creator,
     title,

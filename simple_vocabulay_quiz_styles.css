@@ -151,6 +151,7 @@
     "progress-bar progress-bar progress-bar"
     "first_letter word last_letter"
     "input input check"
+    "alert alert alert"
     ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -234,6 +235,12 @@
     background: #47D8E0;
     grid-area: check;
     width: 90px;
+ }
+
+ .alert_no_input_given {
+   grid-area: alert;
+   margin: 0;
+   padding: 0;
  }
  
  

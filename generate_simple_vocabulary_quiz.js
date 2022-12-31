@@ -52,13 +52,15 @@ let vocabulary_quiz_mode;
     let answer = document.getElementById("answer").value;
   
     if (answer === "") {
-      alert("Necesito una respuesta");
+      document.getElementById("alert_no_input_given").innerText =
+        "⚠️ Please, type your answer. ⚠️";
       return;
     }
   
     const answer_feedback = new_vocabulary_quiz.check_answer(answer);
   
     if (answer_feedback === "correct") {
+
       document.getElementById("inner_progress_bar").style.width = `${
         10 * new_vocabulary_quiz.correct_answers
       }%`;
@@ -91,6 +93,8 @@ let vocabulary_quiz_mode;
           new_vocabulary_quiz.last_letter;
       }, 1000);
     }
+
+    document.getElementById("alert_no_input_given").innerText = "";
   
     document.getElementById("answer").focus({ preventScroll: true });
   

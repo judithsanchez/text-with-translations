@@ -1,4 +1,4 @@
-const Video_Huevo_Gallina = new Content(
+const Video_Huevo_Gallina = new ActivityContent(
     Creator_Curiosamente,
     "¿Qué fue primero, el huevo o la gallina?",
     "video",
@@ -95,7 +95,7 @@ const Video_Huevo_Gallina = new Content(
         in_text: "delincuencia",
         in_text_translation: "delinquency",
         english: "delinquency",
-        spanish: "la delicuencia",
+        spanish: "la delincuencia",
       },
       {
         in_text: "servido",
