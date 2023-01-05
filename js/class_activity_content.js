@@ -1,5 +1,5 @@
 class ActivityContent {
-  constructor(
+  constructor({
     creator,
     title,
     type,
@@ -9,8 +9,8 @@ class ActivityContent {
     cognates,
     challenging_words,
     false_cognates,
-    subjunctives
-  ) {
+    subjunctives,
+  }) {
     this.creator = creator;
     this.title = title;
     this.type = type;
@@ -46,4 +46,3 @@ class ActivityContent {
     return number_of_paragraphs;
   }
 }
-

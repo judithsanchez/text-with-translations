@@ -381,4 +381,3 @@ function toggle_subjunctive_translation(num) {
   subjunctive_translation_span.style.display =
     subjunctive_translation_span.style.display === "inline" ? "none" : "inline";
 }
-
