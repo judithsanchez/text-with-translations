@@ -4,25 +4,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./css/text_with_translations_styles.css">
    <link rel="stylesheet" href="./css/simple_vocabulay_quiz_styles.css">
    <title>Text With Tooltips</title>
 </head>
 <body>
 
-   <section id="activity_info" class="container_activity_info">
-
-      <div id="container_content_title" class="container_content_title"></div>
-
-      <div id="video_container" class="video_container"></div>
-      
-      <div id="container_activity_instructions" class="container_activity_instructions"></div>
-
-      <div id="container_creator_disclaimer" class="container_creator_disclaimer"></div>
-
-      <div id="container_creator_social_media" class="container_creator_social_media"></div>
-
-   </section>
+   <section id="container_activity_info" class="container_activity_info"></section>
 
    <section id="text_with_translations" class="text_with_translations"></section>
 
@@ -37,6 +26,7 @@
             <li>Pick which type of practice you want. (Psst...Spanish to English is a little easier, just saying!)</li>
             <li>Get ready for 10 random questions in the quiz.</li>
             <li>Decide how many lists of words you want to work with.</li>
+            <li>On the game, the pink circle shows the first letter of the answer and the green circle shows the last letter.</li>
             <li class="no_decoration">And that's it! Have fun and happy learning!</li>
          </ul>
 
@@ -116,12 +106,13 @@
          <img src="https://bocaditosespanol.com/wp-content/uploads/2022/12/verb-celebrar.svg" alt="Dabbing celebration pose">
          <p class="buttons" id="again_button" onclick="window.location.reload()">Otra vez</p>
       </section>
-      
-      <section class="no_mobile_landscape">
-         <h2>¡Lo siento!</h2>
-         <img src="https://bocaditosespanol.com/wp-content/uploads/2022/12/verbs-encogerse-de-hombros.svg" alt="Shuriggin Character">
-         <p>Use your device on vertical mode.</p>
-      </section>
+
+   </section>
+
+   <section class="no_landcape_mobile_mode" id="no_landcape_mobile_mode">
+
+      <img alt="Webby having a tantrum" class="angry_witch" id="angry_witch" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/characters-bruja-enfadada.svg">
+      <p>⚠️ Watch out for Webby, the malevolent Internet Witch! She haunts the landscape mode of small devices, causing chaos and mischief. Stay safe and stick to portrait mode. ⚠️</p>
 
    </section>
 

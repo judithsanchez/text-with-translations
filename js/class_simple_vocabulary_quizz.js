@@ -17,11 +17,14 @@ class Vocabulary_Quiz {
     this.incorrect_answers = 0;
     this.status = "in progress";
 
-    this.quiz_mode_instructions =
-      "Choose the type of practice you want. Spanish to English is a bit easier 😉";
-
-    this.quiz_vocabulary_instructions =
-      "The quiz always has 10 random questions. You can choose only one list of words or more.";
+    this.quiz_vocabulary_instructions = [
+      "Hey there! Ready to practice your language skills? Great! Here's what you need to do:",
+      "Pick which type of practice you want. (Psst...Spanish to English is a little easier, just saying!)",
+      "Get ready for 10 random questions in the quiz.",
+      "Decide how many lists of words you want to work with.",
+      "On the game, the pink circle shows the first letter of the answer and the green circle shows the last letter.",
+      "And that's it! Have fun and happy learning!",
+    ];
   }
 
   shuffle_array(array) {

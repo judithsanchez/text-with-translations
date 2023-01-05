@@ -1,3 +1,5 @@
+add_info_containers("container_activity_info");
+
 add_content_title("container_content_title", Curiosamente_Video_Huevo_Gallina);
 
 add_activity_instructions(

@@ -165,6 +165,13 @@
   background-color: rgba(127, 125, 207, 0.75) ;
 }
 
+.no_landcape_mobile_mode {
+  display: none;
+}
+
+.angry_witch {
+  width: 150px;
+}
 
 @media (orientation: portrait) and (max-width: 800px) {
   .container_activity_info {
@@ -223,7 +230,7 @@
   }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
+/* @media (orientation: landscape) and (max-width: 900px) {
   .container_activity_info {
     grid-template-columns: 60% 40%;
   }
@@ -265,7 +272,32 @@
     width: 25px;
     height: 25px;
   }
-}
-
+} */
 
 /* QUIZZ */
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .no_landcape_mobile_mode {
+     display: flex;
+     margin-top: 10%;
+  }
+
+  .no_landcape_mobile_mode p {
+     font-size: 12px;
+     margin-left: 10%;
+     margin-top: 15%;
+  }
+
+  .container_activity_info {
+    display: none;
+ }
+
+
+  .text_with_translations {
+     display: none;
+  }
+
+  .quiz_container {
+     display: none;
+  }
+}

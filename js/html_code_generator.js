@@ -1,3 +1,50 @@
+function add_info_containers(containerID) {
+  const main_container = document.getElementById(containerID);
+
+  const container_title = document.createElement("div");
+  container_title.setAttribute("id", "container_content_title");
+  container_title.setAttribute("class", "container_content_title");
+  main_container.appendChild(container_title);
+
+  const container_video = document.createElement("div");
+  container_video.setAttribute("id", "video_container");
+  container_video.setAttribute("class", "video_container");
+  main_container.appendChild(container_video);
+
+  const container_activity_instructions = document.createElement("div");
+  container_activity_instructions.setAttribute(
+    "id",
+    "container_activity_instructions"
+  );
+  container_activity_instructions.setAttribute(
+    "class",
+    "container_activity_instructions"
+  );
+  main_container.appendChild(container_activity_instructions);
+
+  const container_creator_disclaimer = document.createElement("div");
+  container_creator_disclaimer.setAttribute(
+    "id",
+    "container_creator_disclaimer"
+  );
+  container_creator_disclaimer.setAttribute(
+    "class",
+    "container_creator_disclaimer"
+  );
+  main_container.appendChild(container_creator_disclaimer);
+
+  const container_creator_social_media = document.createElement("div");
+  container_creator_social_media.setAttribute(
+    "id",
+    "container_creator_social_media"
+  );
+  container_creator_social_media.setAttribute(
+    "class",
+    "container_creator_social_media"
+  );
+  main_container.appendChild(container_creator_social_media);
+}
+
 function add_content_title(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
   const title_element = document.createElement("h1");
