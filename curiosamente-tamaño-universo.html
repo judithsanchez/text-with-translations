@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./css/text_with_translations.css">
+   <link rel="stylesheet" href="./css/simple_vocabulay_quiz.css">
+   <title>Text With Tooltips</title>
+</head>
+<body>
+
+   <section id="container_activity_info" class="container_activity_info"></section>
+
+   <section id="text_with_translations" class="text_with_translations"></section>
+
+   <section class="quiz_container" id="quiz_container">
+
+      <section class="select_mode_and_words_screen" id="select_mode_and_words_screen">
+
+         <h2 class="quiz_title" id="quiz_title"><span class="highlight">Vocabulary</span></h2>
+
+         <ul class="quiz_instructions">
+            <li class="no_decoration">Hey there! Ready to practice your language skills? Great! Here's what you need to do:</li>
+            <li>Pick which type of practice you want. (Psst...Spanish to English is a little easier, just saying!)</li>
+            <li>Get ready for 10 random questions in the quiz.</li>
+            <li>Decide how many lists of words you want to work with.</li>
+            <li>On the game, the pink circle shows the first letter of the answer and the green circle shows the last letter.</li>
+            <li class="no_decoration">And that's it! Have fun and happy learning!</li>
+         </ul>
+
+         <section class="select_quiz_mode" id="select_quiz_mode">
+
+            <div class="buttons" id="quiz_mode_eng_spa" onclick="select_quiz_mode(`eng-spa`)">
+               <p>English to Spanish</p>
+            </div>
+         
+            <div class="buttons" id="quiz_mode_spa_eng" onclick="select_quiz_mode(`spa-eng`)">
+               <p>Spanish to English</p>
+            </div>
+   
+         </section>
+
+         <section class="select_quiz_content" id="select_quiz_content">
+         
+            <div class="buttons" id="vocabulary_cognates_button" onclick="add_questions_to_list(Curiosamente_Video_Tamaño_Universo.cognates, `vocabulary_cognates_button`)">
+               <p>Cognates</p>
+            </div>
+         
+            <div class="buttons" id="vocabulary_challenging_words_button" onclick="add_questions_to_list(Curiosamente_Video_Tamaño_Universo.challenging_words, `vocabulary_challenging_words_button`)">
+               <p>Challenging</p>
+               <p>Words</p>
+            </div>
+         
+            <div class="buttons" id="vocabulary_false_cognates_button" onclick="add_questions_to_list(Curiosamente_Video_Tamaño_Universo.false_cognates, `vocabulary_false_cognates_button`)">
+               <p>False</p>
+               <p>Cognates</p>
+            </div>
+         
+            <div class="buttons" id="vocabulary_subjunctives_button" onclick="add_questions_to_list(Curiosamente_Video_Tamaño_Universo.subjunctives, `vocabulary_subjunctives_button`)">
+               <p>Subjunctives</p>
+            </div>
+         
+            <div class="buttons" id="start_quiz_button" onclick="start_quiz(words_list, vocabulary_quiz_mode)">
+               <p>Start</p>
+            </div>
+
+            <p class="alert_not_enough_words" id="alert_not_enough_words"></p>
+   
+         </section>
+
+      </section>
+
+
+      <section class="quiz" id="quiz">
+
+         <div class="progress_bar" id="progress_bar">
+            <div class="inner_progress_bar" id="inner_progress_bar"></div>
+         </div>
+         
+         <div class="quiz_info quiz_first_letter" id="quiz_first_letter">
+            <p class="first_letter" id="first_letter"></p>
+         </div>
+      
+         <div class="quiz_info quiz_word" id="quiz_word">
+            <p class="word" id="word"></p>
+         </div>
+      
+         <div class="quiz_info quiz_last_letter" id="quiz_last_letter">
+            <p class="last_letter" id="last_letter"></p>
+         </div>
+         
+         <input class="input_answer" id="answer" type="text">
+         
+         <div class="buttons check_answer" onclick="check_answer()">
+            <p>Check</p>
+         </div>
+
+         <p class="alert_no_input_given" id="alert_no_input_given"></p>
+         
+      </section>
+
+      <section class="responsive_design end_quiz" id="end_quiz">
+         <h2 class="title_verb" id="title_verb"><span class="highlight">¡Bien hecho!</span></h2>
+         <img src="https://bocaditosespanol.com/wp-content/uploads/2022/12/verb-celebrar.svg" alt="Dabbing celebration pose">
+         <p class="buttons" id="again_button" onclick="window.location.reload()">Otra vez</p>
+      </section>
+
+   </section>
+
+   <section class="no_landcape_mobile_mode" id="no_landcape_mobile_mode">
+
+      <img alt="Webby having a tantrum" class="angry_witch" id="angry_witch" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/characters-bruja-enfadada.svg">
+      <p>⚠️ Watch out for Webby, the malevolent Internet Witch! She haunts the landscape mode of small devices, causing chaos and mischief. Stay safe and stick to portrait mode. ⚠️</p>
+
+   </section>
+
+   <script src="./js/class_creator.js"></script>
+   <script src="./js/class_activity_content.js"></script>
+   <script src="./js/class_text_with_translations.js"></script>
+   <script src="./js/class_simple_vocabulary_quizz.js"></script>
+
+
+   <script src="./js/creators/instances_creator.js"></script>
+   <script src="./js/tamaño_universo/instances_activity_content.js"></script>
+   <script src="./js/tamaño_universo/instance_text_with_translations.js"></script>
+   
+
+   <script src="./js/html_code_generator.js"></script>
+   <script src="./js/tamaño_universo/activity_curiosamente_tamaño_universo.js"></script>
+
+   <script src="./js/instances_and_generator_simple_vocabulary_quiz.js"></script>
+
+</body>
+</html>

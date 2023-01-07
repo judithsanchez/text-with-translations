@@ -692,7 +692,7 @@ const Video_Tecnologia_Deshumaniza = new ActivityContent({
     {
       in_text: "raíces",
       in_text_translation: "roots",
-      english: "roots",
+      english: "root",
       spanish: "la raíz",
     },
     {
