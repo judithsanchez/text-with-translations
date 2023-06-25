@@ -33,16 +33,16 @@ function add_info_containers(containerID) {
   );
   main_container.appendChild(container_creator_disclaimer);
 
-  // const container_creator_social_media = document.createElement("div");
-  // container_creator_social_media.setAttribute(
-  //   "id",
-  //   "container_creator_social_media"
-  // );
-  // container_creator_social_media.setAttribute(
-  //   "class",
-  //   "container_creator_social_media"
-  // );
-  // main_container.appendChild(container_creator_social_media);
+  const container_creator_social_media = document.createElement('div');
+  container_creator_social_media.setAttribute(
+    'id',
+    'container_creator_social_media'
+  );
+  container_creator_social_media.setAttribute(
+    'class',
+    'container_creator_social_media'
+  );
+  main_container.appendChild(container_creator_social_media);
 }
 
 function add_content_title(containerID, TextWithTranslations) {
