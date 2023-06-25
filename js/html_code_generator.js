@@ -1,55 +1,55 @@
 function add_info_containers(containerID) {
   const main_container = document.getElementById(containerID);
 
-  const container_title = document.createElement("div");
-  container_title.setAttribute("id", "container_content_title");
-  container_title.setAttribute("class", "container_content_title");
+  const container_title = document.createElement('div');
+  container_title.setAttribute('id', 'container_content_title');
+  container_title.setAttribute('class', 'container_content_title');
   main_container.appendChild(container_title);
 
-  const container_video = document.createElement("div");
-  container_video.setAttribute("id", "video_container");
-  container_video.setAttribute("class", "video_container");
+  const container_video = document.createElement('div');
+  container_video.setAttribute('id', 'video_container');
+  container_video.setAttribute('class', 'video_container');
   main_container.appendChild(container_video);
 
-  const container_activity_instructions = document.createElement("div");
+  const container_activity_instructions = document.createElement('div');
   container_activity_instructions.setAttribute(
-    "id",
-    "container_activity_instructions"
+    'id',
+    'container_activity_instructions'
   );
   container_activity_instructions.setAttribute(
-    "class",
-    "container_activity_instructions"
+    'class',
+    'container_activity_instructions'
   );
   main_container.appendChild(container_activity_instructions);
 
-  const container_creator_disclaimer = document.createElement("div");
+  const container_creator_disclaimer = document.createElement('div');
   container_creator_disclaimer.setAttribute(
-    "id",
-    "container_creator_disclaimer"
+    'id',
+    'container_creator_disclaimer'
   );
   container_creator_disclaimer.setAttribute(
-    "class",
-    "container_creator_disclaimer"
+    'class',
+    'container_creator_disclaimer'
   );
   main_container.appendChild(container_creator_disclaimer);
 
-  const container_creator_social_media = document.createElement("div");
-  container_creator_social_media.setAttribute(
-    "id",
-    "container_creator_social_media"
-  );
-  container_creator_social_media.setAttribute(
-    "class",
-    "container_creator_social_media"
-  );
-  main_container.appendChild(container_creator_social_media);
+  // const container_creator_social_media = document.createElement("div");
+  // container_creator_social_media.setAttribute(
+  //   "id",
+  //   "container_creator_social_media"
+  // );
+  // container_creator_social_media.setAttribute(
+  //   "class",
+  //   "container_creator_social_media"
+  // );
+  // main_container.appendChild(container_creator_social_media);
 }
 
 function add_content_title(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
-  const title_element = document.createElement("h1");
-  title_element.setAttribute("id", "content_title");
-  title_element.setAttribute("class", "content_title");
+  const title_element = document.createElement('h1');
+  title_element.setAttribute('id', 'content_title');
+  title_element.setAttribute('class', 'content_title');
   container.appendChild(title_element);
 
   const title = document.createTextNode(TextWithTranslations.title);
@@ -59,9 +59,9 @@ function add_content_title(containerID, TextWithTranslations) {
 function add_activity_instructions(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
 
-  const text_element = document.createElement("p");
-  text_element.setAttribute("id", "activity_instructions");
-  text_element.setAttribute("class", "activity_instructions");
+  const text_element = document.createElement('p');
+  text_element.setAttribute('id', 'activity_instructions');
+  text_element.setAttribute('class', 'activity_instructions');
   container.appendChild(text_element);
 
   const disclaimer = document.createTextNode(TextWithTranslations.instructions);
@@ -71,9 +71,9 @@ function add_activity_instructions(containerID, TextWithTranslations) {
 function add_creator_disclaimer(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
 
-  const text_element = document.createElement("p");
-  text_element.setAttribute("id", "creator_disclaimer");
-  text_element.setAttribute("class", "creator_disclaimer");
+  const text_element = document.createElement('p');
+  text_element.setAttribute('id', 'creator_disclaimer');
+  text_element.setAttribute('class', 'creator_disclaimer');
   container.appendChild(text_element);
 
   const disclaimer = document.createTextNode(
@@ -85,122 +85,122 @@ function add_creator_disclaimer(containerID, TextWithTranslations) {
 function add_creator_social_media(containerID, TextWithTranslations) {
   const container = document.getElementById(containerID);
 
-  const instagram_link = document.createElement("a");
+  const instagram_link = document.createElement('a');
   instagram_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.instagram
   );
   container.appendChild(instagram_link);
 
-  const instagram_icon = document.createElement("img");
-  instagram_icon.setAttribute("alt", "Instagram Icon");
-  instagram_icon.setAttribute("class", "creator_social_media");
-  instagram_icon.setAttribute("id", "instagram_icon");
+  const instagram_icon = document.createElement('img');
+  instagram_icon.setAttribute('alt', 'Instagram Icon');
+  instagram_icon.setAttribute('class', 'creator_social_media');
+  instagram_icon.setAttribute('id', 'instagram_icon');
   instagram_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_instagram.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_instagram.svg'
   );
   instagram_link.appendChild(instagram_icon);
 
-  const facebook_link = document.createElement("a");
+  const facebook_link = document.createElement('a');
   facebook_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.facebook
   );
   container.appendChild(facebook_link);
 
-  const facebook_icon = document.createElement("img");
-  facebook_icon.setAttribute("alt", "facebook Icon");
-  facebook_icon.setAttribute("class", "creator_social_media");
-  facebook_icon.setAttribute("id", "facebook_icon");
+  const facebook_icon = document.createElement('img');
+  facebook_icon.setAttribute('alt', 'facebook Icon');
+  facebook_icon.setAttribute('class', 'creator_social_media');
+  facebook_icon.setAttribute('id', 'facebook_icon');
   facebook_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_facebook.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_facebook.svg'
   );
   facebook_link.appendChild(facebook_icon);
 
-  const patreon_link = document.createElement("a");
+  const patreon_link = document.createElement('a');
   patreon_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.patreon
   );
   container.appendChild(patreon_link);
 
-  const patreon_icon = document.createElement("img");
-  patreon_icon.setAttribute("alt", "patreon Icon");
-  patreon_icon.setAttribute("class", "creator_social_media");
-  patreon_icon.setAttribute("id", "patreon_icon");
+  const patreon_icon = document.createElement('img');
+  patreon_icon.setAttribute('alt', 'patreon Icon');
+  patreon_icon.setAttribute('class', 'creator_social_media');
+  patreon_icon.setAttribute('id', 'patreon_icon');
   patreon_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_patreon.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_patreon.svg'
   );
   patreon_link.appendChild(patreon_icon);
 
-  const tiktok_link = document.createElement("a");
+  const tiktok_link = document.createElement('a');
   tiktok_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.tiktok
   );
   container.appendChild(tiktok_link);
 
-  const tiktok_icon = document.createElement("img");
-  tiktok_icon.setAttribute("alt", "tiktok Icon");
-  tiktok_icon.setAttribute("class", "creator_social_media");
-  tiktok_icon.setAttribute("id", "tiktok_icon");
+  const tiktok_icon = document.createElement('img');
+  tiktok_icon.setAttribute('alt', 'tiktok Icon');
+  tiktok_icon.setAttribute('class', 'creator_social_media');
+  tiktok_icon.setAttribute('id', 'tiktok_icon');
   tiktok_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_tiktok.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_tiktok.svg'
   );
   tiktok_link.appendChild(tiktok_icon);
 
-  const twitter_link = document.createElement("a");
+  const twitter_link = document.createElement('a');
   twitter_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.twitter
   );
   container.appendChild(twitter_link);
 
-  const twitter_icon = document.createElement("img");
-  twitter_icon.setAttribute("alt", "twitter Icon");
-  twitter_icon.setAttribute("class", "creator_social_media");
-  twitter_icon.setAttribute("id", "twitter_icon");
+  const twitter_icon = document.createElement('img');
+  twitter_icon.setAttribute('alt', 'twitter Icon');
+  twitter_icon.setAttribute('class', 'creator_social_media');
+  twitter_icon.setAttribute('id', 'twitter_icon');
   twitter_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_twitter.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_twitter.svg'
   );
   twitter_link.appendChild(twitter_icon);
 
-  const youtube_link = document.createElement("a");
+  const youtube_link = document.createElement('a');
   youtube_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.youtube
   );
   container.appendChild(youtube_link);
 
-  const youtube_icon = document.createElement("img");
-  youtube_icon.setAttribute("alt", "youtube Icon");
-  youtube_icon.setAttribute("class", "creator_social_media");
-  youtube_icon.setAttribute("id", "youtube_icon");
+  const youtube_icon = document.createElement('img');
+  youtube_icon.setAttribute('alt', 'youtube Icon');
+  youtube_icon.setAttribute('class', 'creator_social_media');
+  youtube_icon.setAttribute('id', 'youtube_icon');
   youtube_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_youtube.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_youtube.svg'
   );
   youtube_link.appendChild(youtube_icon);
 
-  const website_link = document.createElement("a");
+  const website_link = document.createElement('a');
   website_link.setAttribute(
-    "href",
+    'href',
     TextWithTranslations.content.creator.socialmedia.website
   );
   container.appendChild(website_link);
 
-  const website_icon = document.createElement("img");
-  website_icon.setAttribute("alt", "website Icon");
-  website_icon.setAttribute("class", "creator_social_media");
-  website_icon.setAttribute("id", "website_icon");
+  const website_icon = document.createElement('img');
+  website_icon.setAttribute('alt', 'website Icon');
+  website_icon.setAttribute('class', 'creator_social_media');
+  website_icon.setAttribute('id', 'website_icon');
   website_icon.setAttribute(
-    "src",
-    "https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_curiosamente.svg"
+    'src',
+    'https://bocaditosespanol.com/wp-content/uploads/2022/12/logo_curiosamente.svg'
   );
   website_link.appendChild(website_icon);
 }
@@ -208,18 +208,18 @@ function add_creator_social_media(containerID, TextWithTranslations) {
 function add_video_iframe(containerID, TextWithTranslations) {
   const video_container = document.getElementById(containerID);
 
-  const video_iframe = document.createElement("iframe");
+  const video_iframe = document.createElement('iframe');
   video_iframe.setAttribute(
-    "src",
+    'src',
     TextWithTranslations.content.youtube_embed_url
   );
-  video_iframe.setAttribute("title", "YouTube video player");
-  video_iframe.setAttribute("frameborder", "0");
+  video_iframe.setAttribute('title', 'YouTube video player');
+  video_iframe.setAttribute('frameborder', '0');
   video_iframe.setAttribute(
-    "allow",
-    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    'allow',
+    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
   );
-  video_iframe.setAttribute("allowfullscreen", "");
+  video_iframe.setAttribute('allowfullscreen', '');
 
   video_container.appendChild(video_iframe);
 }
@@ -231,14 +231,14 @@ function add_content_text(sectionID, TextWithTranslations) {
   let paragraph_counter = 0;
 
   for (let i = 0; i < TextWithTranslations.number_of_sections; i++) {
-    const container = document.createElement("div");
-    container.setAttribute("id", `container${i}`);
-    container.setAttribute("class", "content_containers");
+    const container = document.createElement('div');
+    container.setAttribute('id', `container${i}`);
+    container.setAttribute('class', 'content_containers');
     container_text_translations.appendChild(container);
 
-    const title = document.createElement("h3");
-    title.setAttribute("id", `title${i}`);
-    title.setAttribute("class", "titles");
+    const title = document.createElement('h3');
+    title.setAttribute('id', `title${i}`);
+    title.setAttribute('class', 'titles');
     container.appendChild(title);
     const textNode = document.createTextNode(
       TextWithTranslations.sections[i].title
@@ -250,9 +250,9 @@ function add_content_text(sectionID, TextWithTranslations) {
       j < TextWithTranslations.sections[i].paragraphs.length;
       j++
     ) {
-      const paragraph = document.createElement("p");
-      paragraph.setAttribute("id", `paragraph${paragraph_counter}`);
-      paragraph.setAttribute("class", "paragraphs");
+      const paragraph = document.createElement('p');
+      paragraph.setAttribute('id', `paragraph${paragraph_counter}`);
+      paragraph.setAttribute('class', 'paragraphs');
       container.appendChild(paragraph);
 
       const textNode = document.createTextNode(
@@ -288,7 +288,7 @@ function add_cognates(TextWithTranslations) {
         const cognate_span_container = `<span class='highlighted_cognates' id='cognate${cognate_counter}'  onclick='toggle_cognate_translation(${cognate_counter})'>${cognate}</span><span class='cognates_translations translation' id='cognate_translation${cognate_counter}'>${TextWithTranslations.cognates[i].in_text_translation}</span>`;
 
         split_sentence.splice(cognate_index, 1, cognate_span_container);
-        const joined_sentence = split_sentence.join("");
+        const joined_sentence = split_sentence.join('');
 
         // You can't use innerText to add the elements.
         paragraph.innerHTML = joined_sentence;
@@ -303,7 +303,7 @@ function toggle_cognate_translation(num) {
     `cognate_translation${num}`
   );
   cognate_translation_span.style.display =
-    cognate_translation_span.style.display === "inline" ? "none" : "inline";
+    cognate_translation_span.style.display === 'inline' ? 'none' : 'inline';
 }
 
 function add_challenging_words(TextWithTranslations) {
@@ -330,7 +330,7 @@ function add_challenging_words(TextWithTranslations) {
           1,
           challenging_word_span_container
         );
-        const joined_sentence = split_sentence.join("");
+        const joined_sentence = split_sentence.join('');
 
         paragraph.innerHTML = joined_sentence;
         challenging_word_counter++;
@@ -344,9 +344,9 @@ function toggle_challening_word_translation(num) {
     `challenging_word_translation${num}`
   );
   challenging_word_translation_span.style.display =
-    challenging_word_translation_span.style.display === "inline"
-      ? "none"
-      : "inline";
+    challenging_word_translation_span.style.display === 'inline'
+      ? 'none'
+      : 'inline';
 }
 
 function add_false_cognates(TextWithTranslations) {
@@ -373,7 +373,7 @@ function add_false_cognates(TextWithTranslations) {
           1,
           false_cognate_span_container
         );
-        const joined_sentence = split_sentence.join("");
+        const joined_sentence = split_sentence.join('');
 
         paragraph.innerHTML = joined_sentence;
         false_cognate_counter++;
@@ -387,9 +387,9 @@ function toggle_false_cognate_translation(num) {
     `false_cognate_translation${num}`
   );
   false_cognate_translation_span.style.display =
-    false_cognate_translation_span.style.display === "inline"
-      ? "none"
-      : "inline";
+    false_cognate_translation_span.style.display === 'inline'
+      ? 'none'
+      : 'inline';
 }
 
 function add_subjunctives(TextWithTranslations) {
@@ -412,7 +412,7 @@ function add_subjunctives(TextWithTranslations) {
         const subjunctive_span_container = `<span class='highlighted_subjunctives' id='subjunctive${subjunctive_counter}'  onclick='toggle_subjunctive_translation(${subjunctive_counter})'>${subjunctive}</span><span class='subjunctives_translations translation' id='subjunctive_translation${subjunctive_counter}'>${TextWithTranslations.subjunctives[i].in_text_translation}</span>`;
 
         split_sentence.splice(subjunctive_index, 1, subjunctive_span_container);
-        const joined_sentence = split_sentence.join("");
+        const joined_sentence = split_sentence.join('');
 
         paragraph.innerHTML = joined_sentence;
         subjunctive_counter++;
@@ -426,5 +426,5 @@ function toggle_subjunctive_translation(num) {
     `subjunctive_translation${num}`
   );
   subjunctive_translation_span.style.display =
-    subjunctive_translation_span.style.display === "inline" ? "none" : "inline";
+    subjunctive_translation_span.style.display === 'inline' ? 'none' : 'inline';
 }

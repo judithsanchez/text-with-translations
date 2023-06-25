@@ -635,12 +635,6 @@ const Video_Tamaño_Universo = new ActivityContent({
       english: "nearby",
       spanish: "cercana",
     },
-    {
-      in_text: "tamaño",
-      in_text_translation: "size",
-      english: "size",
-      spanish: "tamaño",
-    },
   ],
 
   // False Cognates
